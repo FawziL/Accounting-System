@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+        <div class="container">
+        <h1>Recuperar contraseña</h1>
+        <h4 id="message"></h4>
+        <form method="post" action="resetpass.php">
+            <h4>Ingrese su usuario seguido de la nueva contraseña</h4>
+            <div class="input-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="newpassword">Nueva contraseña:</label>
+                <input type="password" id="newpassword" name="newpassword" required>
+            </div>
+            <div class="input-group">
+                <label for="newpasswordaux">Confirmar contraseña:</label>
+                <input type="password" id="newpasswordaux" name="newpasswordaux" required>
+            </div>
+            <button type="submit">Actualizar contraseña</button>
+        </form>
+    </div>
+    <script>
+        // Obtener el mensaje de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        
+        // Mostrar el mensaje si existe
+        if (message) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = message;
+        }
+    </script>
+</body>
+</html>

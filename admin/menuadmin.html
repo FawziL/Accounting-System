@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Grilla de Empresas</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('mensaje') === 'success') {
+                alert('Contraseña actualizada exitosamente.');
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido $ADMIN</h2>
+        <div class="filter">
+            <input type="text" id="search" placeholder="Buscar empresa" size="30">
+        </div>
+    </div>
+    <div class = "panel">
+        <h3>Panel ADMIN</h3>
+        <a href="#" id="add-empresa">Registrar Empresa</a>
+        <a href="#" >Registrar Contable</a>
+        <a href="../accountant/modcontable.html">Modificar Empleado</a>
+        <a href="#">Deshabilitar Contable</a>
+    </div>
+    <div id="add-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-add">&times;</span>
+        <h2>Registrar Nueva Empresa</h2>
+        <form class="add-company-form" id="add-company-form">
+            <label for="rif">RIF de la Empresa:</label>
+            <input class="form" type="text" id="rif" placeholder="RIF de la Empresa" required>
+            <label for="company-email">Correo de la Empresa:</label>
+            <input class="form" type="email" id="company-email" placeholder="Correo de la Empresa" required>
+            <label for="manager-email">Correo del Encargado:</label>
+            <input class="form" type="email" id="manager-email" placeholder="Correo del Encargado" required>
+            <label for="phone">Número de Contacto:</label>
+            <input class="form" type="text" id="phone" placeholder="Número de Contacto" required>
+            <div  class="btn-group">
+                <input type="checkbox" id="declare-alcaldia"> Declara en Alcaldía
+                <input type="checkbox" id="declare-seniat"> Declara en SENIAT
+            </div>
+            <br>
+            <button type="submit">Registrar Empresa</button>
+        </form>
+    </div>
+</div>
+
+    <hr>
+    <div class="sub-container">
+        
+        <a class="card">
+            <h2>Empresa 1</h2>
+            <p>Correo: contacto@empresa1.com</p>
+            <p>Ubicación: Ciudad A</p>
+            <p>Número de contacto: 0212-0000000</p>
+        </a>
+
+        <div class="card">
+            <h2>Empresa 2</h2>
+            <p>Correo: contacto@empresa2.com</p>
+            <p>Ubicación: Ciudad B</p>
+            <p>Número de contacto: 0424-0000000</p>
+        </div>
+        <div class="card">
+            <h2>Empresa 3</h2>
+            <p>Correo: contacto@empresa3.com</p>
+            <p>Ubicación: Ciudad C</p>
+            <p>Número de contacto: 0412-0000000</p>
+        </div>
+        <div class="card">
+            <h2>Empresa 4</h2>
+            <p>Correo: contacto@empresa4.com</p>
+            <p>Ubicación: Ciudad D</p>
+            <p>Número de contacto: 0426-0000000</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

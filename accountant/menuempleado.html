@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Empresas</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('mensaje') === 'success') {
+                alert('Contraseña actualizada exitosamente.');
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido $CONTABLE</h2>
+        <div class="filter">
+            <input type="text" id="search" placeholder="Buscar empresa" size="30">
+        </div>
+    </div>
+    <hr>
+    <div class="sub-container">
+        <div class="card">
+            <h2><a href="#" class="anchor" onclick="toggleInfo(event)">Empresa 1</a></h2>
+            <p>Correo: contacto@empresa1.com</p>
+            <p>Ubicación: Ciudad A</p>
+            <p>Número de contacto: 0212-0000000</p>
+        </div>
+        <div id="infoBox" class="info-box hidden">
+            <div>
+                <label>Nombre: <span id="nameDisplay">Juan</span></label>
+                <input type="text" id="nameInput" class="hidden" value="Juan">
+            </div>
+            <div>
+                <label>Apellido: <span id="surnameDisplay">Pérez</span></label>
+                <input type="text" id="surnameInput" class="hidden" value="Pérez">
+            </div>
+            <div>
+                <label>Correo: <span id="emailDisplay">juan.perez@example.com</span></label>
+                <input type="email" id="emailInput" class="hidden" value="juan.perez@example.com">
+            </div>
+            <div>
+                <label>Número: <span id="phoneDisplay">123456789</span></label>
+                <input type="text" id="phoneInput" class="hidden" value="123456789">
+            </div>
+            <button class="box-btn" id="editButton" onclick="toggleEdit()">Editar</button>
+            <button class="box-btn" onclick="removeInfo()">Eliminar</button>
+        </div>
+        <div class="card">
+            <h2><a href="#">Empresa 2</a></h2>
+            <p>Correo: contacto@empresa2.com</p>
+            <p>Ubicación: Ciudad B</p>
+            <p>Número de contacto: 0424-0000000</p>
+        </div>
+        <div class="card">
+            <h2><a href="#">Empresa 3</a></h2>
+            <p>Correo: contacto@empresa3.com</p>
+            <p>Ubicación: Ciudad C</p>
+            <p>Número de contacto: 0412-0000000</p>
+        </div>
+        <div class="card">
+            <h2><a href="#">Empresa 4</a></h2>
+            <p>Correo: contacto@empresa4.com</p>
+            <p>Ubicación: Ciudad D</p>
+            <p>Número de contacto: 0426-0000000</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

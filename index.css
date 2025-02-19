@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body {
+    background: linear-gradient(240deg,#53ac59 10%,#03484c  30%, #1c232e 100%) no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+}
+.container {
+    text-align: center;
+    padding: 50px;
+}
+.header {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 1px 2px 8px #03484c;
+}
+h3 {
+    text-shadow: 1px 0 8px #03484c;
+}
+.description {
+    font-size: 18px;
+    color: #f5f848da;
+    margin-bottom: 40px;
+    text-shadow: 1px 2px 7px #87f38c;
+}
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.column {
+    background-color: #5a7f78;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ffffff5b;
+    width: 20vw;
+    height: 50vh;
+    text-align: left;
+    position: relative;
+}
+.column h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 15vh;
+    color: #d1d1d1;
+    text-shadow: 1px 0 8px #03484c;
+}
+.column hr {
+    border: none;
+    border-top: 2px solid #03484c;
+    margin: 10px 0;
+}
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+.column ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.column::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #bbdec6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.login-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    background-color: #bbdec6;
+    color: #383838;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ffffff25;
+    transition: .2s ease-in-out;
+    font-weight: 700;
+}
+.login-button:hover {
+    background-color: #1c232e;
+    color:#d1d1d1;
+    box-shadow: 0   0   25px  #ffffffaf;
+}
